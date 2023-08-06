@@ -18,9 +18,12 @@ petalinux-config -c uboot
 petalinux-create -t project  -s ../xilinx-zcu102-v2022.2-10141622.bsp 
 dd bs=8192 status=progress  if=~/../rootfs.ext4  of=/dev/sdc2
 ```
-# fix umount errors -
+# fix umount errors
 ```
 fsck /dev/sde2
+
+# minicom example
+```
 minicom  -D /dev/ttyUSBX -b 115200
 ```
 
@@ -41,7 +44,3 @@ the_ROM_image:
 	[destination_cpu=a53-0, exception_level=el-2] u-boot.elf
 }
 ```
-
-
-
-}
