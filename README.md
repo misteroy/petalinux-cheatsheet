@@ -18,20 +18,21 @@ petalinux-config -c uboot
 petalinux-create -t project  -s ../xilinx-zcu102-v2022.2-10141622.bsp 
 dd bs=8192 status=progress  if=~/../rootfs.ext4  of=/dev/sdc2
 ```
-# fix umount errors
+fix umount errors
 ```
 fsck /dev/sde2
+```
 
-# minicom example
+minicom example
 ```
 minicom  -D /dev/ttyUSBX -b 115200
 ```
 
-# device tree decompile into dts
+device tree decompile into dts
 ```
 dtc -I dtb -O dts system.dtb -o /tmp/tmp.dts
 ```
-# bootgen.bif example:
+bootgen.bif example:
 
 ```
 the_ROM_image:
