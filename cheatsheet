@@ -47,6 +47,8 @@ the_ROM_image:
 #Debug Kernel - this will download and boot: bitstream,pmu,fsbl,bl31, device-tree and u-boot.elf
 petalinux-boot --jtag --u-boot --fpga --bitstream system.bit
 
-
+#boot kernel in u-boot
+> pxe get
+> pxe boot
 
 
