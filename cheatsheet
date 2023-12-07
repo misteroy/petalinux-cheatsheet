@@ -1,6 +1,6 @@
 # petalinux-cheatsheet
 
-```
+
 chmod 755 ./petalinux-v2022.2-final-installer.run
 sudo chmod 755 ./petalinux-v2022.2-final-installer.run 
 ./petalinux-v2022.2-final-installer.run --dir ~/../petalinux/2022.2/
@@ -16,24 +16,22 @@ petalinux-config -c rootfs
 petalinux-config -c uboot
 petalinux-create -t project  -s ../xilinx-zcu102-v2022.2-10141622.bsp 
 dd bs=8192 status=progress  if=~/../rootfs.ext4  of=/dev/sdc2
-```
-fix umount errors
-```
+
+
+#fix umount errors
 fsck /dev/sde2
-```
 
-minicom example
-```
+
+#minicom example
 minicom  -D /dev/ttyUSBX -b 115200
-```
 
-device tree decompile into dts
-```
+
+#device tree decompile into dts
 dtc -I dtb -O dts system.dtb -o /tmp/tmp.dts
-```
-bootgen.bif example:
 
-```
+
+#bootgen.bif example:
+
 the_ROM_image:
 {
 	[bootloader, destination_cpu=a53-0] zynqmp_fsbl.elf
@@ -43,4 +41,12 @@ the_ROM_image:
 	[destination_cpu=a53-0, load=0x00100000] system.dtb
 	[destination_cpu=a53-0, exception_level=el-2] u-boot.elf
 }
-```
+
+
+
+#Debug Kernel - this will download and boot: bitstream,pmu,fsbl,bl31, device-tree and u-boot.elf
+petalinux-boot --jtag --u-boot --fpga --bitstream system.bit
+
+
+
+
