@@ -1,15 +1,15 @@
 #!/bin/bash
 ################################################################################
-#                              bdl scripts	    	                             #
+#                              plnx scripts	                                  #
 #                                                                              #
 # Petalinux script for deploying petalinux images                              # 
-# into sd card.                               	             						       #
+# into sd card.                               	      						       #
 # description of the script here.                                              #
 #                                                                              #
 # Change History                                                               #
-# 23/11/2021  Roy Cohen     new nxp lsdk shell scripts				  		           #		
-# 24/08/2023  Roy Cohen     ported for xilinx petalinux 			  		           #		
-#                                                      			  			           # 
+# 23/11/2021  Roy Cohen     new nxp lsdk shell scripts				  		       #		
+# 24/08/2023  Roy Cohen     ported for xilinx petalinux 			  		          #		
+#                                                      			  			       # 
 #                                                                              #
 #                                                                              #
 ################################################################################
