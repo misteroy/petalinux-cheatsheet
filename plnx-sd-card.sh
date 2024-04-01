@@ -1,21 +1,17 @@
 #!/bin/bash
-################################################################################
-#                              plnx scripts	                                  #
-#                                                                              #
-# Petalinux script for deploying petalinux images                              # 
-# into sd card.                               	      						       #
-# description of the script here.                                              #
-#                                                                              #
-# Change History                                                               #
-# 23/11/2021  Roy Cohen     new nxp lsdk shell scripts				  		       #		
-# 24/08/2023  Roy Cohen     ported for xilinx petalinux 			  		          #		
-#                                                      			  			       # 
-#                                                                              #
-#                                                                              #
-################################################################################
+/*
+ *                              plnx scripts                                  
+ *                                                                            
+ * Petalinux script for deploying petalinux images                           
+ * into an SD card.
+ * Enable debug=1    -- enable debug messages
+ * Disable debbug=0  -- disable debug messages
+ *                                 
+ * Change History:
+ * 23/11/2021 - Roy Cohen: New NXP LSDK shell scripts
+ * 24/08/2023 - Roy Cohen: Ported for Xilinx PetaLinux
+ */
 
-# Enable debug=1    -- enable debug messages
-# Disable debbug=0  -- disable debug messages
 debug=1;
 
 #get OS pretty name
