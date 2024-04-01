@@ -1,5 +1,3 @@
-Here's your text formatted with good Markdown style, suitable for documentation or a README file on GitHub or similar platforms:
-
 ---
 
 # PetaLinux Cheat Sheet
