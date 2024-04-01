@@ -81,3 +81,17 @@ $ sf write 0x80000 <0ximage_flash_address> <0xfile_size>
 # reset board in QSPI mode.
 
 
+# Example for u-boot.txt
+
+	# Set environment variables
+	setenv bootargs console=ttyPS0,115200 earlyprintk root=/dev/mmcblk0p2 rw rootwait
+
+	# Load the image from QSPI flash into memory
+	sf probe 0; sf read ${loadaddr} 0x100000 0x800000
+
+	# Boot the image
+	bootm ${loadaddr}
+
+
+# How to create a boot.scr file from the boot.txt:
+mkimage -C none -A arm -T script -d boot.txt boot.scr
