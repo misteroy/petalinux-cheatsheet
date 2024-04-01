@@ -1,6 +1,10 @@
-# PetaLinux Cheat Sheet
+# PetaLinux Scripts
 
-This cheat sheet includes common commands used in PetaLinux projects.
+Xilinx Petalinux scripts for building, deploying, debugging etc..
+
+# PetaLinux Cheat-Sheet
+
+This following cheat-sheet includes common commands used in PetaLinux based projects.
 
 ## Installation
 
@@ -145,7 +149,3 @@ bootm ${loadaddr}
 ```bash
 mkimage -C none -A arm -T script -d boot.txt boot.scr
 ```
-
----
-
-This Markdown format provides a clear, organized, and easy-to-read layout for your cheat sheet, ideal for quick reference.

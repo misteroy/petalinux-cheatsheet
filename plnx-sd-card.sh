@@ -1,6 +1,6 @@
 #!/bin/bash
 /*
- *                              plnx scripts                                  
+ *              plnx scripts                                  
  *                                                                            
  * Petalinux script for deploying petalinux images                           
  * into an SD card.
