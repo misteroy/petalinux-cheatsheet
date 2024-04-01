@@ -52,3 +52,32 @@ petalinux-boot --jtag --u-boot --fpga --bitstream system.bit
 > pxe boot
 
 
+#QSPI Flash boot
+#Make sure tftp server is up
+#Make sure the images are located in /srv/tfpboot directory
+
+$ sf probe 0 0 0
+
+$ sf erase 0 0x8000000 # for a 128MiB flash size
+
+# read BOOT.BIN into DDR
+$ tfpboot 0x80000 BOOT.BIN
+
+# write BOOT.BIN into Flash
+$ sf write 0x80000 0x0 <0xfile_size>
+
+# read image.ub into DDR
+$ tfpboot 0x80000 image.ub
+
+# write image.ub.BIN into Flash
+$ sf write 0x80000 <0ximage_flash_address> <0xfile_size>
+
+# read boot.scr into DDR
+$ tfpboot 0x80000 boot.scr
+
+# write boot.scr into Flash
+$ sf write 0x80000 <0ximage_flash_address> <0xfile_size>
+
+# reset board in QSPI mode.
+
+
