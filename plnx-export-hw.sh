@@ -1,0 +1,1 @@
+$petalinux-package --bsp -p <plnx-proj-root> --output bsp_name.bsp
