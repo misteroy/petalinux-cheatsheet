@@ -1,5 +1,3 @@
----
-
 # PetaLinux Cheat Sheet
 
 This cheat sheet includes common commands used in PetaLinux projects.
